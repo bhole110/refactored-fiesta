@@ -2,206 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAGIC TOOL – VIP Entry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title></title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Meta Pixel -->
+<!-- META PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
-s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
-}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '897762256335438');
+fbq('init', '1453685103018625'); 
 fbq('track', 'PageView');
 </script>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat',sans-serif
-}
+/* SAME PREMIUM DESIGN */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html,body{height:100%;overflow:hidden;background:#000;color:#fff;}
+body{display:flex;justify-content:center;align-items:center;}
+.container{width:100%;max-width:420px;padding:18px;text-align:center;}
+.top-bar{color:#00ff88;font-size:13px;margin-bottom:10px;}
+.logo{width:110px;height:110px;border-radius:50%;margin:auto;
+background:linear-gradient(145deg,#1a1a1a,#000);
+border:2px solid #d4af37;display:flex;align-items:center;justify-content:center;
+font-weight:700;color:#d4af37;font-size:13px;box-shadow:0 0 25px rgba(212,175,55,0.7);}
+h1{font-size:26px;margin-top:15px;font-weight:800;}
+.sub{color:#d4af37;margin:8px 0 18px;font-size:14px;}
+.features{border:1px solid #d4af37;border-radius:12px;padding:14px;margin-bottom:20px;background:#111;}
+.features p{margin:7px 0;font-weight:600;font-size:14px;}
 
-body{
-background:#05010c;
-color:#fff;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden
-}
-
-.bg{
-position:fixed;
-inset:0;
-background:radial-gradient(circle at 50% 20%,#1a0033,#000 70%);
-z-index:-2
-}
-
-.wrap{
-text-align:center;
-padding:20px;
-max-width:420px;
-width:100%
-}
-
-.logo{
-width:110px;
-height:110px;
-border-radius:50%;
-border:3px solid #00ffe7;
-box-shadow:0 0 30px #00ffe7;
-margin-bottom:15px
-}
-
-h1{
-font-size:30px;
-color:#00ffe7;
-text-shadow:0 0 20px #00ffe7
-}
-
-h2{
-font-size:15px;
-color:#bbb;
-margin-top:5px
-}
-
-.stats{
-margin-top:10px;
-font-size:14px;
-color:#00ffe7
-}
-
-.grid{
-margin-top:20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px
-}
-
-.box{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(0,255,255,.4);
-border-radius:12px;
-padding:12px;
-backdrop-filter:blur(8px)
-}
-
-.join{
-margin-top:25px;
+.btn{
+position:relative;
+display:block;
 width:100%;
-padding:18px;
-border:none;
-border-radius:50px;
-font-size:20px;
+margin:14px 0;
+padding:20px;
+border-radius:12px;
+text-decoration:none;
 font-weight:800;
-background:linear-gradient(45deg,#00ffe7,#00bfff);
+font-size:19px;
 color:#000;
-cursor:pointer;
-box-shadow:0 0 40px #00ffe7;
-transition:0.3s
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+overflow:hidden;
+transition:all 0.3s ease;
+box-shadow:0 0 20px rgba(212,175,55,0.8);
 }
 
-.join:hover{
-transform:scale(1.05)
+.btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-75%;
+width:50%;
+height:100%;
+background:rgba(255,255,255,0.5);
+transform:skewX(-25deg);
+animation:flash 1.9s infinite;
 }
 
-.feed{
-margin-top:15px;
-color:#00ffe7;
-font-size:14px;
-height:20px
+@keyframes flash{
+0%{left:-75%;}
+100%{left:125%;}
 }
+
+.btn:hover{transform:translateY(-6px) scale(1.05);}
+.btn:active{transform:scale(0.95);}
+
+.timer{margin-top:10px;font-size:14px;color:#ccc;}
+.footer{margin-top:18px;font-size:11px;color:#777;}
 </style>
 </head>
 
 <body>
 
-<div class="bg"></div>
+<div class="container">
 
-<div class="wrap">
-<img src="https://i.ibb.co/XkpR8vBw/photo-2026-02-25-10-05-29.jpg" class="logo">
+<div class="top-bar">🟢 49,842 ACTIVE TRADERS</div>
+
+<div class="Logo">
+    <img src="https://i.ibb.co/XkpR8vBw/photo-2026-02-25-10-05-29.jpg" class="logo">
+</div>
+
 <h1>MAGIC TOOL</h1>
-<h2>India’s Most Trusted Prediction Network</h2>
+<div class="sub">Grow Small Accounts. 100% Free Access.</div>
 
-<div class="stats">
-🌍 <span id="country">Detecting...</span> |
-👥 <span id="members">49,842</span> members
+<div class="features">
+<p>✔️ DAILY LIVE SESSION</p>
+<p>✔️ FREE GIFTCODES</p>
+<p>✔️ 95%+ ACCURACY</p>
 </div>
 
-<div class="grid">
-<div class="box">✔️ 96% Accuracy</div>
-<div class="box">💰 ₹10Cr+ Profit</div>
-<div class="box">🔥 VIP Signals</div>
-<div class="box">🚀 Fast Updates</div>
+<a href="#" onclick="trackSubscribe()" class="btn">JOIN NOW</a>
+<a href="#" onclick="trackSubscribe()" class="btn">JOIN FREE TELEGRAM</a>
+
+<div class="timer">
+⚡️ Offer Expires In: <span id="countdown">01:00</span>
 </div>
 
-<button class="join" id="btn">
-<i class="fab fa-telegram"></i> Join VIP Telegram
-</button>
-
-<div class="feed" id="feed">🔥 Someone joined VIP</div>
-
+<div class="footer">
+Marketed by: TG @BHOLENOTOP<br>
+Disclaimer: Trading involves risk.
 </div>
 
-<audio id="unlockSound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-level-completed-2059.mp3"></audio>
+</div>
 
 <script>
-const btn=document.getElementById("btn");
-const sound=document.getElementById("unlockSound");
-const feed=document.getElementById("feed");
-const country=document.getElementById("country");
-
-/* Country Detect */
-fetch("https://ipapi.co/json/")
-.then(r=>r.json())
-.then(d=>country.innerText=d.country_name||"India")
-.catch(()=>country.innerText="India");
-
-/* Smooth Live Feed */
-const msgs=[
-"🔥 Suresh joined VIP",
-"💰 Rohan won ₹38,200",
-"🚀 VIP unlocked",
-"🔥 Pankaj earned ₹18,500"
-];
-let i=0;
-setInterval(()=>{
-feed.style.opacity=0;
-setTimeout(()=>{
-feed.innerText=msgs[i++%msgs.length];
-feed.style.opacity=1;
+function trackSubscribe(){
+fbq('track', 'Subscribe');
+setTimeout(function(){
+window.location.href="https://t.me/+MMTG--0meHE4MzM9";
 },300);
-},2500);
-
-/* Button Click */
-btn.onclick=()=>{
-sound.currentTime=0;
-sound.play().catch(()=>{});
-
-if(navigator.vibrate){
-navigator.vibrate(200);
 }
 
-/* 🔥 Subscribe Event Tracking */
-fbq('track','Subscribe',{
-value:1,
-currency:'INR'
-});
+let time = 60;
+let countdown = document.getElementById("countdown");
 
-setTimeout(()=>{
-window.location.href="https://t.me/+MMTG--0meHE4MzM9";
-},500);
-};
+let timer = setInterval(() => {
+if(time > 0){
+time--;
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+countdown.innerHTML =
+String(minutes).padStart(2,'0') + ":" +
+String(seconds).padStart(2,'0');
+}
+},1000);
 </script>
 
 </body>
