@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGIC TOOL – VIP Entry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '897762256335438');
+fbq('track', 'PageView');
+</script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif
+}
+
+body{
+background:#05010c;
+color:#fff;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden
+}
+
+.bg{
+position:fixed;
+inset:0;
+background:radial-gradient(circle at 50% 20%,#1a0033,#000 70%);
+z-index:-2
+}
+
+.wrap{
+text-align:center;
+padding:20px;
+max-width:420px;
+width:100%
+}
+
+.logo{
+width:110px;
+height:110px;
+border-radius:50%;
+border:3px solid #00ffe7;
+box-shadow:0 0 30px #00ffe7;
+margin-bottom:15px
+}
+
+h1{
+font-size:30px;
+color:#00ffe7;
+text-shadow:0 0 20px #00ffe7
+}
+
+h2{
+font-size:15px;
+color:#bbb;
+margin-top:5px
+}
+
+.stats{
+margin-top:10px;
+font-size:14px;
+color:#00ffe7
+}
+
+.grid{
+margin-top:20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px
+}
+
+.box{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(0,255,255,.4);
+border-radius:12px;
+padding:12px;
+backdrop-filter:blur(8px)
+}
+
+.join{
+margin-top:25px;
+width:100%;
+padding:18px;
+border:none;
+border-radius:50px;
+font-size:20px;
+font-weight:800;
+background:linear-gradient(45deg,#00ffe7,#00bfff);
+color:#000;
+cursor:pointer;
+box-shadow:0 0 40px #00ffe7;
+transition:0.3s
+}
+
+.join:hover{
+transform:scale(1.05)
+}
+
+.feed{
+margin-top:15px;
+color:#00ffe7;
+font-size:14px;
+height:20px
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="wrap">
+<img src="https://i.ibb.co/XkpR8vBw/photo-2026-02-25-10-05-29.jpg" class="logo">
+<h1>MAGIC TOOL</h1>
+<h2>India’s Most Trusted Prediction Network</h2>
+
+<div class="stats">
+🌍 <span id="country">Detecting...</span> |
+👥 <span id="members">49,842</span> members
+</div>
+
+<div class="grid">
+<div class="box">✔️ 96% Accuracy</div>
+<div class="box">💰 ₹10Cr+ Profit</div>
+<div class="box">🔥 VIP Signals</div>
+<div class="box">🚀 Fast Updates</div>
+</div>
+
+<button class="join" id="btn">
+<i class="fab fa-telegram"></i> Join VIP Telegram
+</button>
+
+<div class="feed" id="feed">🔥 Someone joined VIP</div>
+
+</div>
+
+<audio id="unlockSound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-level-completed-2059.mp3"></audio>
+
+<script>
+const btn=document.getElementById("btn");
+const sound=document.getElementById("unlockSound");
+const feed=document.getElementById("feed");
+const country=document.getElementById("country");
+
+/* Country Detect */
+fetch("https://ipapi.co/json/")
+.then(r=>r.json())
+.then(d=>country.innerText=d.country_name||"India")
+.catch(()=>country.innerText="India");
+
+/* Smooth Live Feed */
+const msgs=[
+"🔥 Suresh joined VIP",
+"💰 Rohan won ₹38,200",
+"🚀 VIP unlocked",
+"🔥 Pankaj earned ₹18,500"
+];
+let i=0;
+setInterval(()=>{
+feed.style.opacity=0;
+setTimeout(()=>{
+feed.innerText=msgs[i++%msgs.length];
+feed.style.opacity=1;
+},300);
+},2500);
+
+/* Button Click */
+btn.onclick=()=>{
+sound.currentTime=0;
+sound.play().catch(()=>{});
+
+if(navigator.vibrate){
+navigator.vibrate(200);
+}
+
+/* 🔥 Subscribe Event Tracking */
+fbq('track','Subscribe',{
+value:1,
+currency:'INR'
+});
+
+setTimeout(()=>{
+window.location.href="https://t.me/+MMTG--0meHE4MzM9";
+},500);
+};
+</script>
+
+</body>
+</html>
